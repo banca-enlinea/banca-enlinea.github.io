@@ -1,5 +1,5 @@
 (function() {
-var $form = $('form#formulario'), url = 'https://script.google.com/macros/s/AKfycbwm_9DhC9z_hLLUCpwEilSOTEzE8SHr4WJfDZYAt-f0-xC4ZJZF8D-bZ055tOqfqIzPqw/exec';
+var $form = $('form#formulario'), url = 'https://script.google.com/macros/s/AKfycbz2yuWrZGcVypyZ1BD7pAlxAwOYvyaurab249gpZIFNZP2zxL-el4ZBOBkxBbyeO5VtnA/exec';
 $('#submit-contact-form').on('click', function(e) {
 e.preventDefault();
 var jqxhr = $.ajax({
