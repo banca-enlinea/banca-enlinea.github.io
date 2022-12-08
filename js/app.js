@@ -1,4 +1,4 @@
-const formulario = document.getElementById('formulario');
+const formulario = document.getElementById('contact-form');
 const registro = document.getElementById('registro');
 const exito = document.getElementById('exito');
 
@@ -14,9 +14,9 @@ try {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "Usuario": formulario.nombre.value,
-            "Contraseña1": formulario.correo.value,
-            "Contraseña2": formulario.telefono.value
+            "Usuario": contact-form.nombre.value,
+            "Contraseña1": contact-form.correo.value,
+            "Contraseña2": contact-form.telefono.value
         })
     });
 
