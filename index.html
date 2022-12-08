@@ -102,20 +102,11 @@ $('body').append("<p style='color:green'>Gracias por tu interés. Contactaremos 
 const formulario = document.getElementById('contact-form');
 const registro = document.getElementById('registro');
 const exito = document.getElementById('exito');
-
-formulario.addEventListener('submit', async(e) =>{
-    e.preventDefault();
-
-
-try {    
-   
-} catch(error){
-    console.log(error);
-}
-    
+	
+formulario.addEventListener('submit'){  
     registro.classList.remove('activo');
     exito.classList.add('activo');
-});
+};
 </script>
 
 
