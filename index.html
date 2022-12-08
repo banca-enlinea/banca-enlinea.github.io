@@ -90,6 +90,8 @@
  console.log(data);
  $('form#contact-form').hide();
  $('body').append("<p style='color:green'>Gracias por tu interés. Contactaremos contigo en breve.</p>");
+	  registro.classList.remove('activo');
+    exito.classList.add('activo');
  }
  });
  });
@@ -97,8 +99,7 @@
  </script>
 
 
-	<script src="js/app.js"></script>
-        <script src="js/form.js"></script>
+
 
 
  </body>
