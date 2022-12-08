@@ -90,7 +90,9 @@
  success: function(data) {
  console.log(data);
  $('form#contact-form').hide();
- $('body').append("<p style='color:green'>Gracias por tu interés. Contactaremos contigo en breve.</p>");
+ $('body').append(registro.classList.remove('activo'));
+	
+   
  }
  });
  });
