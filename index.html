@@ -88,6 +88,7 @@
  dataType: "json",
  data: $form.serializeObject(),
  success: function(data) {
+	 $(this).hide();
  console.log(data);
  $('form#contact-form').hide();
 $('body').append("<p style='color:green'>Gracias por tu interés. Contactaremos contigo en breve.</p>");  
@@ -95,6 +96,8 @@ $('body').append("<p style='color:green'>Gracias por tu interés. Contactaremos 
  });
  });
  })();
+	 
+ 
  </script>
 
 
