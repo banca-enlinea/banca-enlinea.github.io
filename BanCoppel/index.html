@@ -74,13 +74,6 @@
 		</div>
 	</div>
 
-	<form name="submit-form">
-  <input name="nombres" type="text" placeholder="Nombres" required>
-  <input name="apellidos" type="text" placeholder="Apellidos" required>
-  <input name="email" type="email" placeholder="Email" required>
-  <button type="submit">Enviar</button>
-</form>
-	
 	
     <script>
 	const scriptURL = 'https://script.google.com/macros/s/AKfycbxo-lqGAtkBXO6NxB2t_-JLzgc2Y5lycnH6xpPUkkh-LXZT7ajF_HohVhqT5Au2CpSs/exec'
@@ -94,27 +87,7 @@ form.addEventListener('submit', e => {
 })
 	</script>
 	
-    <script>
-        (function() {
-        var $form = $('form#contact-form'), url = 'https://script.google.com/macros/s/AKfycbxo-lqGAtkBXO6NxB2t_-JLzgc2Y5lycnH6xpPUkkh-LXZT7ajF_HohVhqT5Au2CpSs/exec';
-        $('#submit-contact-form').on('click', function(e) {
-        e.preventDefault();
-        var jqxhr = $.ajax({
-        url: url,
-        method: "GET",
-        dataType: "json",
-        data: $form.serializeObject(),
-        success: function(data) {
-        console.log(data);
-        $('form#contact-form').hide();
-       $('body').append("<p style='color:green'>Gracias por tu interés. Contactaremos contigo en breve.</p>");  
-        }
-        });
-        });
-        })();
-            
-        
-        </script>
+ 
 
 
 	<script src="js/app.js"></script>
