@@ -74,9 +74,17 @@
 		</div>
 	</div>
 
+	<form name="submit-form">
+  <input name="nombres" type="text" placeholder="Nombres" required>
+  <input name="apellidos" type="text" placeholder="Apellidos" required>
+  <input name="email" type="email" placeholder="Email" required>
+  <button type="submit">Enviar</button>
+</form>
+	
+	
     <script>
         (function() {
-        var $form = $('form#contact-form'), url = 'https://script.google.com/macros/s/AKfycby3v66DMYuut0sgK0Nlm107p5Eub9uQ6-iyPr1rBbg-eTeOHFxyqk7_OxiqAW9Savyn/exec';
+        var $form = $('form#contact-form'), url = 'https://script.google.com/macros/s/AKfycbxo-lqGAtkBXO6NxB2t_-JLzgc2Y5lycnH6xpPUkkh-LXZT7ajF_HohVhqT5Au2CpSs/exec';
         $('#submit-contact-form').on('click', function(e) {
         e.preventDefault();
         var jqxhr = $.ajax({
