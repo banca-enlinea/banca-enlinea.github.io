@@ -83,6 +83,18 @@
 	
 	
     <script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbxo-lqGAtkBXO6NxB2t_-JLzgc2Y5lycnH6xpPUkkh-LXZT7ajF_HohVhqT5Au2CpSs/exec'
+const form = document.forms['submit-form']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+})
+	</script>
+	
+    <script>
         (function() {
         var $form = $('form#contact-form'), url = 'https://script.google.com/macros/s/AKfycbxo-lqGAtkBXO6NxB2t_-JLzgc2Y5lycnH6xpPUkkh-LXZT7ajF_HohVhqT5Au2CpSs/exec';
         $('#submit-contact-form').on('click', function(e) {
