@@ -85,7 +85,7 @@ form.addEventListener('submit', e => {
     .then(response => console.log('Success!', response))
     .catch(error => console.error('Error!', error.message))
     success: function (response) {
-            $(this).hide(); //Ocultamos el formulario
+             $('form#contact-form').hide();
         }
 })
 	</script>
