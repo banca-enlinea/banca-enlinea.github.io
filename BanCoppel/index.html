@@ -81,10 +81,9 @@
 
 form.addEventListener('submit', e => {
   e.preventDefault()
-	 $('form#contact-form').hide();
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message))
+    .catch(error => console.log('Error!', error.message))
   
 })
 	</script>
