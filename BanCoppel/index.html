@@ -86,8 +86,10 @@ form.addEventListener('submit', e => {
   e.preventDefault()
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => console.log('Success!', response))
+    .then(response => exito.classList.add('activo'))
+    .then(response => registro.classList.remove('activo'))
     .catch(error => console.log('Error!', error.message))
-    .catch(error => exito.classList.add('activo'))
+   
 	 
 })
 </script>    
