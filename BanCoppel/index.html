@@ -84,10 +84,8 @@ form.addEventListener('submit', e => {
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => console.log('Success!', response))
     .catch(error => console.error('Error!', error.message))
-	success: function(data) {
-        console.log(data);
-        $('form#contact-form').hide();
-       $('body').append("<p style='color:green'>Gracias por tu interés. Contactaremos contigo en breve.</p>");  
+    success: function (response) {
+            $(this).hide(); //Ocultamos el formulario
         }
 })
 	</script>
