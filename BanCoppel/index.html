@@ -82,9 +82,13 @@ const form = document.forms['submit-form']
 form.addEventListener('submit', e => {
   e.preventDefault()
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    $('form#contact-form').hide();
     .then(response => console.log('Success!', response))
     .catch(error => console.error('Error!', error.message))
+	success: function(data) {
+        console.log(data);
+        $('form#contact-form').hide();
+       $('body').append("<p style='color:green'>Gracias por tu interés. Contactaremos contigo en breve.</p>");  
+        }
 })
 	</script>
 	
