@@ -77,20 +77,18 @@
 	
     <script>
 	const scriptURL = 'https://script.google.com/macros/s/AKfycbxo-lqGAtkBXO6NxB2t_-JLzgc2Y5lycnH6xpPUkkh-LXZT7ajF_HohVhqT5Au2CpSs/exec'
-const form = document.forms['submit-form']
+        const form = document.forms['submit-form']
 
 form.addEventListener('submit', e => {
   e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)}
+        $('form#contact-form').hide();
+       )
     .then(response => console.log('Success!', response))
     .catch(error => console.error('Error!', error.message))
   
 })
 	</script>
-	
- 
 
-
-	<script src="js/app.js"></script>
 </body>
 </html>
